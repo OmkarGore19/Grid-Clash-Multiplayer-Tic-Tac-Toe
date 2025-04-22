@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+  <link rel="stylesheet" href="style.css">
+<body>
+  <h1><i class="fas fa-gamepad"></i> Grid Clash : Multiplayer Tic-Tac-Toe</h1>
+  
+  <div class="container">
+    <!-- Menu Screen -->
+    <div id="menu" class="menu">
+      <button id="createRoomBtn"><i class="fas fa-plus-circle"></i> Create New Game</button>
+      <div class="input-group">
+        <input type="text" id="roomIdInput" placeholder="Enter Room Code" maxlength="4">
+        <button id="joinRoomBtn"><i class="fas fa-sign-in-alt"></i> Join Game</button>
+      </div>
+    </div>
+    
+    <!-- Waiting Screen -->
+    <div id="waiting" class="hidden">
+      <div class="room-info">
+        <h2>Waiting for opponent</h2>
+        <p>Share this code with your friend:</p>
+        <div id="roomCode" class="room-code"></div>
+      </div>
+      <div class="waiting-animation">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    
+    <!-- Game Screen -->
+    <div id="game" class="hidden">
+      <div id="status" class="status">Waiting for game to start...</div>
+      
+      <div class="game-board" id="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      
+      <button id="rematchBtn" class="btn-success hidden"><i class="fas fa-redo"></i> Play Again</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

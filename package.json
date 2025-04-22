@@ -1,0 +1,17 @@
+{
+  "name": "multiplayer-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "A simple distributed multiplayer Tic-Tac-Toe game",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
